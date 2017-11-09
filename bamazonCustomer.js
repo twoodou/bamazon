@@ -33,6 +33,8 @@ var promptCustomer = function(res) {
     name: "choice",
     message: "Which item would you like to purchase?"
   }]).then(function(answer) {
+    // console.log(res);
+    // console.log(answer);
     var correct = false;
     for (var i = 0; i < res.length; i++) {
       if (res[i].product_name == answer.choice) {
@@ -62,6 +64,8 @@ var promptCustomer = function(res) {
           } else {
             console.log("Not a valid selection!");
             promptCustomer(res);
+
+
           }
         });
       }
